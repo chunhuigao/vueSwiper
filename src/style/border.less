@@ -1,0 +1,20 @@
+@max: 50;
+@min: 0;
+
+.br(@i) when(@i <=@max) {
+  .b-@{i} {
+    border: @i + 0px;
+  }
+  .b-l-@{i} {
+    border-left: @i + 0px;
+  }
+  .b-r-@{i} {
+    border-right: @i + 0px;
+  }
+  .br-@{i} {
+    border-radius: @i + 0px;
+  }
+
+  .br((@i + 1));
+}
+.br(@min);

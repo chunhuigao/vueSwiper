@@ -1,0 +1,14 @@
+@max: 50;
+@min: 12;
+
+.font(@i) when(@i <=@max) {
+  .f-s-@{i} {
+    font-size: @i + 0px;
+  }
+  .l-h-@{i} {
+    line-height: @i + 0px;
+  }
+
+  .font((@i + 1));
+}
+.font(@min);

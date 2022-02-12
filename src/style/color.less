@@ -1,0 +1,13 @@
+@colors: {
+  primary:blue ;
+  secondary:green ;
+  f1:#252525 ;
+}
+each(@colors,{
+  .color-@{key}{
+    color: @value;
+  }
+  .bg-@{key}{
+    background-color: @value;
+  }
+})
