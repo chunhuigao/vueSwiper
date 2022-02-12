@@ -10,18 +10,6 @@
         </YinSlide>
       </YinSwiper>
     </div>
-    <button v-on:click="changeSwiper" class="color-primary">点击我切换</button>
-    <div :style="{ textAlign: 'center' }">指示器示例</div>
-    <div class="paginationStyle">
-      <span
-        v-for="item in [0, 1, 2, 3, 4, 5, 6, 7]"
-        :key="item"
-        :class="item === currentIndex ? 'dot selectStyle' : 'dot'"
-      />
-    </div>
-    <button @click="changeSwiperData">
-      点击我增加卡片长度{{ swiperList.length }}
-    </button>
   </div>
 </template>
 
@@ -55,10 +43,7 @@ export default {
     this.setHtmlFontSize(360)
 
     setTimeout(() => {
-      // this.swiperList = ['orange'];
-      // this.swiperList = ['orange', 'red'];
-      // this.swiperList = ['orange', 'red', 'blue'];
-      this.swiperList = ['#30f', 'red', 'blue', 'orange']
+      this.swiperList = ['red', 'blue', 'orange']
     }, 10)
     window.addEventListener('resize', () => {
       const clientWidth = document.body.clientWidth
